@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class HomeScreen extends Component {
+class SearchScreen extends Component {
   render() {
     return (
       <View>
@@ -11,4 +11,4 @@ class HomeScreen extends Component {
   }
 }
 
-export default HomeScreen;
+export default SearchScreen;
