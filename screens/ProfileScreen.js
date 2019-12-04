@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import ScreenTop from '../components/shared/screenTop/ScreenTop';
 import ProfileView from '../components/profileView/ProfileView';
 
+
 class ProfileScreen extends Component {
     render() {
         return (
@@ -21,7 +22,6 @@ const style = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         color: '#000',
-        backgroundColor: '#FF0000'
     },
 });
 
