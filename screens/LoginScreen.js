@@ -17,7 +17,6 @@ class LoginScreen extends Component {
     this.setState({
       values
     });
-    console.log(values);
     AsyncStorage.setItem('userToken', 'asdfasdf');
     this.props.navigation.navigate('Profile');
   };

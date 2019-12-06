@@ -17,7 +17,6 @@ class RegisterScreen extends Component {
     this.setState({
       values
     });
-    console.log(values);
   };
 
   render() {

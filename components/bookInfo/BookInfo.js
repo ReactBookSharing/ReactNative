@@ -1,29 +1,36 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-import chelikImg from '../../assets/images/chelik.png';
-
-class ProfileView extends Component {
+class BookInfo extends Component {
   render() {
+    const { book } = this.props;
     return (
       <View style={style.containerWrapper}>
         <View style={style.container}>
-          <View style={style.imageContainer}>
-            <Image source={chelikImg} />
-            <Text>@asuleiman</Text>
-          </View>
           <View style={style.dataWrapper}>
             <View style={style.textRow}>
               <Text style={style.textBold}>Name:</Text>
-              <Text> Assyl Suleiman </Text>
+              <Text> {book.name} </Text>
+            </View>
+            <View style={style.textRow}>
+              <Text style={style.textBold}>Author:</Text>
+              <Text> {book.authorName} </Text>
             </View>
             <View style={style.textRow}>
               <Text style={style.textBold}>Rating:</Text>
-              <Text> 5.0 / 5.0 </Text>
+              <Text> {book.rating} / 5.0 </Text>
             </View>
             <View style={style.textRow}>
               <Text style={style.textBold}>Exchange amount:</Text>
               <Text> 24 </Text>
+            </View>
+            <View style={style.textRow}>
+              <Text style={style.textBold}>Owner:</Text>
+              <Text> @asuleiman</Text>
+            </View>
+            <View style={style.textRow}>
+              <Text style={style.textBold}>Cost:</Text>
+              <Text> {book.cost} KZT</Text>
             </View>
           </View>
         </View>
@@ -32,36 +39,29 @@ class ProfileView extends Component {
   }
 }
 
-export default ProfileView;
+export default BookInfo;
 
 const style = StyleSheet.create({
   containerWrapper: {
     backgroundColor: '#FFF',
     width: '100%',
-    padding: 10,
+    padding: 10
   },
   container: {
     borderColor: '#3F33FF',
     borderRadius: 3,
     borderWidth: 1,
     width: '100%',
-    height: 150,
+    height: 250,
+    padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#FFF',
     color: '#000'
   },
-  imageContainer: {
-    width: '30%',
-    minWidth: 150,
-    height: '100%',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center'
-  },
   dataWrapper: {
-    width: '70%',
+    width: '100%',
     height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-around',

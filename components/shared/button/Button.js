@@ -8,17 +8,19 @@ class CustomButton extends Component {
       disabled,
       onPress,
       btnStyle,
-      margins
+      margins,
+      styleProps
     } = this.props;
     margins = margins ? margins : {};
+    styleProps = styleProps ? styleProps : {};
     return (
       <TouchableOpacity
         onPress={onPress}
         disabled={disabled}
         style={
           btnStyle === 'outFilled'
-            ? { ...style.button, ...style.buttonOutFilled, ...margins }
-            : { ...style.button, ...style.buttonFilled, ...margins }
+            ? {...{ ...style.button, ...style.buttonOutFilled, ...margins, }, ...styleProps}
+            : { ...{...style.button, ...style.buttonFilled, ...margins}, ...styleProps }
         }
       >
         <Text
@@ -46,7 +48,7 @@ const style = StyleSheet.create({
     paddingVertical: 5,
     paddingHorizontal: 10,
     margin: 10,
-    flex: 1,
+    flexDirection: "column",
     justifyContent: 'center',
     alignItems: 'center'
   },

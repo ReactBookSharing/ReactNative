@@ -6,20 +6,37 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import HomeScreen from './screens/HomeScreen';
-import SearchScreen from './screens/SearchScreen';
-import AddScreen from './screens/AddScreen';
 import NotificationScreen from './screens/NotificationScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import AuthLoadingScreen from './screens/AuthLoadingScreen';
-const AppStack = createBottomTabNavigator(
+import DetailScreen from './screens/DetailScreen';
+
+const AppBookNavigator = createStackNavigator(
   {
     Home: HomeScreen,
-    Search: SearchScreen,
-    Add: AddScreen,
+    Detail: DetailScreen
+  },
+  {
+    defaultNavigationOptions: {
+      header: null
+    },
+    initialRouteName: 'Home'
+  }
+);
+
+const AppBottomNavigator = createBottomTabNavigator(
+  {
+    Home: AppBookNavigator,
     Notification: NotificationScreen,
     Profile: ProfileScreen
   },
   {
+    navigationOptions: ({ navigation }) => {
+      const { routeName } = navigation.state.routes[navigation.state.index];
+      return {
+        headerTitle: routeName
+      };
+    },
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
@@ -38,7 +55,7 @@ const AppStack = createBottomTabNavigator(
           iconName = `ios-contact`;
         }
 
-        return <Ionicons name={iconName} size={size} color={color} />
+        return <Ionicons name={iconName} size={size} color={color} />;
       }
     }),
     tabBarOptions: {
@@ -47,6 +64,10 @@ const AppStack = createBottomTabNavigator(
     }
   }
 );
+
+const AppStackNavigator = createStackNavigator({
+  AppBottomNavigator
+});
 
 const AuthStack = createStackNavigator(
   {
@@ -65,7 +86,7 @@ const App = createAppContainer(
     {
       AuthLoading: AuthLoadingScreen,
       Auth: AuthStack,
-      App: AppStack
+      App: AppStackNavigator
     },
     {
       initialRouteName: 'AuthLoading'
