@@ -35,43 +35,43 @@ const style = StyleSheet.create({
 const notifications = [
   {
     id: '1',
-    text: 'asdf asdfjl k askdfj ;uewior ka fas hhasdhasdf kasdyuwehfnsdkfn',
+    text: 'User @name wants to exchange book with you',
     buttonText1: 'More',
     buttonText2: 'Decline'
   },
   {
     id: '2',
-    text: 'asdf asdfjl k askdfj ;uewior ka fas hhasdhasdf kasdyuwehfnsdkfn',
+    text: 'User @name wants to buy one book from you',
     buttonText1: 'More',
     buttonText2: 'Decline'
   },
   {
     id: '3',
-    text: 'asdf asdfjl k askdfj ;uewior ka fas hhasdhasdf kasdyuwehfnsdkfn',
+    text: 'User @name wants to subscribe you',
     buttonText1: 'More',
     buttonText2: 'Decline'
   },
   {
     id: '4',
-    text: 'asdf asdfjl k askdfj ;uewior ka fas hhasdhasdf kasdyuwehfnsdkfn',
+    text: 'User @name commneted',
     buttonText1: 'More',
     buttonText2: 'Decline'
   },
   {
     id: '5',
-    text: 'asdf asdfjl k askdfj ;uewior ka fas hhasdhasdf kasdyuwehfnsdkfn',
+    text: 'User @name published book for exchange',
     buttonText1: 'More',
     buttonText2: 'Decline'
   },
   {
     id: '6',
-    text: 'asdf asdfjl k askdfj ;uewior ka fas hhasdhasdf kasdyuwehfnsdkfn',
+    text: 'User @name rate you',
     buttonText1: 'More',
     buttonText2: 'Decline'
   },
   {
     id: '7',
-    text: 'asdf asdfjl k askdfj ;uewior ka fas hhasdhasdf kasdyuwehfnsdkfn',
+    text: 'Please rate @name',
     buttonText1: 'More',
     buttonText2: 'Decline'
   }
