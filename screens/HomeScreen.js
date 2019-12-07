@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import BookPreview from '../components/bookPreview/BookPreview';
 import bookImg from '../assets/images/book.jpg';
+import bookImg1 from '../assets/images/master.jpg';
+import bookImg2 from '../assets/images/crime.jpg';
+import bookImg3 from '../assets/images/deadsouls.jpg';
+import bookImg4 from '../assets/images/cherry.jpg';
+import bookImg5 from '../assets/images/naruto.jpg';
+import bookImg6 from '../assets/images/calculus.jpg';
+import bookImg7 from '../assets/images/alchemist.jpg';
 class HomeScreen extends Component {
   render() {
     return (
@@ -53,57 +60,57 @@ const books = [
   },
   {
     id: '2',
-    img: bookImg,
-    name: "War and Peace",
-    authorName: "Lev Tolstoy",
+    img: bookImg1,
+    name: "The Master and Margarita",
+    authorName: "Michail Bulgakov",
     rating: "4.0",
     status: "available"
   },
   {
     id: '3',
-    img: bookImg,
-    name: "War and Peace",
-    authorName: "Lev Tolstoy",
+    img: bookImg2,
+    name: "Crime and Punishment",
+    authorName: "Fyodor Dostoevsky",
     rating: "4.0",
     status: "available"
   },
   {
     id: '4',
-    img: bookImg,
-    name: "War and Peace",
-    authorName: "Lev Tolstoy",
+    img: bookImg3,
+    name: "Dead souls",
+    authorName: "Nicolau Gogol",
     rating: "4.0",
     status: "available"
   },
   {
     id: '5',
-    img: bookImg,
-    name: "War and Peace",
-    authorName: "Lev Tolstoy",
+    img: bookImg4,
+    name: "The Cherry Orchard",
+    authorName: "Anton Chekhov",
     rating: "4.0",
     status: "available"
   },
   {
     id: '6',
-    img: bookImg,
-    name: "War and Peace",
-    authorName: "Lev Tolstoy",
+    img: bookImg5,
+    name: "Naruto",
+    authorName: "Masashi Kishimoto",
     rating: "4.0",
     status: "available"
   },
   {
     id: '7',
-    img: bookImg,
-    name: "War and Peace",
-    authorName: "Lev Tolstoy",
+    img: bookImg6,
+    name: "Thomas' Calculus",
+    authorName: "George Calculus",
     rating: "4.0",
     status: "available"
   },
   {
     id: '8',
-    img: bookImg,
-    name: "War and Peace",
-    authorName: "Lev Tolstoy",
+    img: bookImg7,
+    name: "Alchemist",
+    authorName: "Paolo Coelho",
     rating: "4.0",
     status: "available"
   }
