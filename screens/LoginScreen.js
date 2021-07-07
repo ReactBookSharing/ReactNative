@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { View, StyleSheet, ImageBackground, Image, Text } from 'react-native';
+import { AsyncStorage, View, StyleSheet, ImageBackground, Image, Text } from 'react-native';
 import CustomTextInput from '../components/shared/inputs/TextInput';
 import CustomButton from '../components/shared/button/Button';
 
@@ -17,7 +17,8 @@ class LoginScreen extends Component {
     this.setState({
       values
     });
-    console.log(values);
+    AsyncStorage.setItem('userToken', 'asdfasdf');
+    this.props.navigation.navigate('Profile');
   };
 
   render() {
@@ -78,7 +79,7 @@ class LoginScreen extends Component {
                   />
                   <CustomButton
                     title="Регистрация"
-                    onPress={() => {}}
+                    onPress={() => { this.props.navigation.navigate('Register')}}
                     disabled={false}
                     btnStyle="outFilled"
                     margins={{

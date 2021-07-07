@@ -17,7 +17,6 @@ class RegisterScreen extends Component {
     this.setState({
       values
     });
-    console.log(values);
   };
 
   render() {
@@ -124,7 +123,7 @@ class RegisterScreen extends Component {
                   />
                   <CustomButton
                     title="Войти"
-                    onPress={() => {}}
+                    onPress={() => { this.props.navigation.navigate('Login')}}
                     btnStyle="outFilled"
                     margins={{
                       marginHorizontal: 0

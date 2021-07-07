@@ -3,15 +3,11 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 
 import chelikImg from '../../assets/images/chelik.png';
 
-class ProfileView extends Component {
+class ProfileData extends Component {
   render() {
     return (
       <View style={style.containerWrapper}>
         <View style={style.container}>
-          <View style={style.imageContainer}>
-            <Image source={chelikImg} />
-            <Text>@asuleiman</Text>
-          </View>
           <View style={style.dataWrapper}>
             <View style={style.textRow}>
               <Text style={style.textBold}>Name:</Text>
@@ -25,6 +21,14 @@ class ProfileView extends Component {
               <Text style={style.textBold}>Exchange amount:</Text>
               <Text> 24 </Text>
             </View>
+            <View style={style.textRow}>
+              <Text style={style.textBold}>Email:</Text>
+              <Text> asuleyman2403@gmail.com </Text>
+            </View>
+            <View style={style.textRow}>
+              <Text style={style.textBold}>Phone number:</Text>
+              <Text> + 7 (747) 589 66 99 </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -32,36 +36,29 @@ class ProfileView extends Component {
   }
 }
 
-export default ProfileView;
+export default ProfileData;
 
 const style = StyleSheet.create({
   containerWrapper: {
     backgroundColor: '#FFF',
     width: '100%',
-    padding: 10,
+    padding: 10
   },
   container: {
     borderColor: '#3F33FF',
     borderRadius: 3,
     borderWidth: 1,
     width: '100%',
-    height: 150,
+    height: 250,
+    padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#FFF',
     color: '#000'
   },
-  imageContainer: {
-    width: '30%',
-    minWidth: 150,
-    height: '100%',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center'
-  },
   dataWrapper: {
-    width: '70%',
+    width: '100%',
     height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-around',

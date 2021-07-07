@@ -1,44 +1,46 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-import chelikImg from '../../assets/images/chelik.png';
-
-class ProfileView extends Component {
+class BookPreview extends Component {
   render() {
+    const { book, onPress } = this.props;
     return (
-      <View style={style.containerWrapper}>
-        <View style={style.container}>
+      <View style={style.containerWrapper} >
+        <TouchableOpacity style={style.container} onPress={onPress}>
           <View style={style.imageContainer}>
-            <Image source={chelikImg} />
-            <Text>@asuleiman</Text>
+            <Image source={book.img} style={style.image}/>
           </View>
           <View style={style.dataWrapper}>
             <View style={style.textRow}>
               <Text style={style.textBold}>Name:</Text>
-              <Text> Assyl Suleiman </Text>
+              <Text> { book.name} </Text>
+            </View>
+            <View style={style.textRow}>
+              <Text style={style.textBold}>Author:</Text>
+              <Text> {book.authorName} </Text>
             </View>
             <View style={style.textRow}>
               <Text style={style.textBold}>Rating:</Text>
-              <Text> 5.0 / 5.0 </Text>
+              <Text> { book.rating } / 5.0 </Text>
             </View>
             <View style={style.textRow}>
-              <Text style={style.textBold}>Exchange amount:</Text>
-              <Text> 24 </Text>
+              <Text style={style.textBold}>Status:</Text>
+              <Text> { book.status } </Text>
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
     );
   }
 }
 
-export default ProfileView;
+export default BookPreview;
 
 const style = StyleSheet.create({
   containerWrapper: {
     backgroundColor: '#FFF',
     width: '100%',
-    padding: 10,
+    padding: 10
   },
   container: {
     borderColor: '#3F33FF',
@@ -59,6 +61,10 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center'
+  },
+  image: {
+      width: 80,
+      height: 120
   },
   dataWrapper: {
     width: '70%',
